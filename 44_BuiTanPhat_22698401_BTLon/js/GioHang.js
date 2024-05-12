@@ -86,3 +86,23 @@ function cong3() {
 
 capNhatTien();
 
+
+
+// Khởi tạo một mảng để lưu trữ các sản phẩm trong giỏ hàng
+var gioHang = [];
+
+// Hàm thêm sản phẩm vào giỏ hàng
+function themVaoGioHang(sanPham) {
+    gioHang.push(sanPham);
+}
+
+// Hàm cập nhật tổng tiền
+function capNhatTongTien() {
+    var tongTien = 0;
+    gioHang.forEach(function(sanPham) {
+        tongTien += sanPham.gia * sanPham.soLuong;
+    });
+    return tongTien;
+}
+
+
